@@ -1,25 +1,14 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>심화페이지6</title>
+    <title>마블 ost 모음</title>
 
     <style>
-    @font-face {
-    font-family: '-KITA-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/-KITA-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* { margin: 0; padding: 0;
-        font-family: 'Mini_handwriting';}
-
         /* 초기화 */
             * { 
                 margin: 0; padding: 0;
-                font-family: '-KITA-Regular';
+                font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif;
             }
             a { text-decoration: none; }
             li { list-style: none; }
@@ -28,35 +17,34 @@
             .pull-right { float:right; }
     
         /* 페이지 */
-        body {
-                width: 960px; margin: 0 auto;
-                background-size: 1550px;
+            body {
+                text-align: center;
+                width: 800px; margin:  auto;
+                background-size: 1560px;
             }
     
             #page-wrapper {
-                background:center url(2021년마블인트로.gif);
+                background:#ffbcbc;
                 margin: 40px 0; padding: 10px 20px;
                 border-radius: 5px;
                 box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
             }
         /* 헤더 */
             #main-header { padding: 40px 50px; }
-            .master-title { 
+            .master-title {
                 font-size: 30px; 
-                color: #ffffff;
-                background-color: darkred;
-                width: 267px; height: 29px;
+                color: #181818;
             }
             .master-description {
                 font-size: 15px; font-weight: 500;
-                color: #ffffff;
+                color: #383838;
             }
     
         /* 네비게이션 */
     
             #main-navigation {
-                border-top: 1px solid #C8C8C8;
-                border-bottom: 1px solid #C8C8C8;
+                border-top: 1px solid #ff2424;
+                border-bottom: 1px solid #ff2424;
                 margin-bottom: 20px;
                 height: 40px;
             }
@@ -75,7 +63,6 @@
                 height: 30px; line-height: 30px;
                 text-align: center;
                 padding: 5px 20px;
-                color: white;
             }
     
             .inner-menu {
@@ -112,15 +99,15 @@
                 display: block;
                 float: left;
     
-                background-color: hsl(0, 100%, 50%);
-                border: 1px solid #0d00ff;
+                background-color: #FFFFFF;
+                border: 1px solid #CCCCCC;
                 border-radius: 15px 0 0 15px;
                 box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
     
                 width: 120px; height: 24px;
                 padding: 0 0 0 10px;
                 font-size: 12px;
-                color: #ffffff;
+                color: #555555;
             }
     
             .input-search:focus {
@@ -133,11 +120,9 @@
                 display: block;
                 float: left;
     
-                color: white;
-                background-color:#0d00ff ;
                 width: 50px; height: 26px;
                 border-radius: 0 15px 15px 0;
-                border: 1px solid hsl(0, 100%, 50%);
+                border: 1px solid #CCCCCC;
     
                 margin-left: -1px;
     
@@ -158,26 +143,23 @@
                 float: right;
                 width: 200px;
             }
-            
-
+    
         /* 좌측  */
     
             article { 
                 padding: 0 10px 20px 10px;
-                border-bottom: 1px solid #C8C8C8;
+                border-bottom: 1px solid #ff2424;
             }
     
             .article-header { padding: 20px 0; }
             .article-title { 
-                font-size: 25px;
+                font-size: 40px;
                 font-weight: 500; 
                 padding-bottom: 10px;
-                color: white;
             }
-            .article-date { font-size: 13px; }
+            .article-date { font-size: 20px; }
             .article-body {
                 font-size: 14px;
-                color: white;
             }
     
         /* 우측  */
@@ -186,21 +168,16 @@
             .aside-list > h3 {
                 font-size: 15px;
                 font-weight: 600;
-                color: white;
-                background-color: crimson;
-                width: 107px;
-                height: 34px;
             }
             .aside-list li a {
                 margin-left: 8px;
                 font-size: 13px;
-                color: #ffffff;
+                color: #6C6C6C;
             }
+             /*gif박스*/
             
-        /*gif박스*/
             
-            
-            .p {
+             .p {
                 position: fixed;
                 left: 0px;
                 top: 0px ;
@@ -221,131 +198,158 @@
                 top: -5px;
             }
 
+            .fp4{
+                position: fixed;
+                right: 0%;
+                bottom: 70%;
+                width: 90px;
+                height: 70px;
+            }
+            .fp5{
+                position: fixed;
+                right: 0%;
+                bottom: 55%;
+                background-color: rgb(255, 139, 238);
+                width: 90px;
+                height: 70px;
+            }
+            .fp6{
+                position: fixed;
+                right: 0%;
+                bottom: 40%;
+                background-color: rgb(139, 230, 255);
+                width: 90px;
+                height: 70px;
+            }
+            .fp7{
+                position: fixed;
+                right: 0%;
+                bottom: 25%;
+                background-color: rgb(139, 230, 255);
+                width: 90px;
+                height: 70px;
+            }
+
 
         </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.outer-menu-item').hover(function () {
+                $(this).find('.inner-menu').show();
+            }, function () {
+                $(this).find('.inner-menu').hide();
+            });
+        });
+    </script>
 </head>
-<body background="[스파이더맨2] 오프닝 타이틀.gif">
+<body background="스파이더맨2 오프닝 타이틀.gif">
     <!-- 주석: 내가 알아두어야할 것들.. 기억해야할 것들.. 메모.. -->
     <div id="page-wrapper">
         <header id="main-header">
             <hgroup>
-                <h1 class="master-title">마블 덕후가 뽑은 명장면</h1>
-                <h2 class="master-description">KooBonJoon</h2>
-                <img src="블랙위도우.gif" width="270px" height="200px"/>
-                <img src="토르 라그나로크.gif" width="270px" height="200px"/>
-                <img src="헐크.gif" width="270px" height="200px"/>
-                <img src="호크아이.gif" width="270px" height="200px"/>
-                <img src="아이언맨2.gif" width="270px" height="200px"/>
-                <img src="캡틴아메리카 묠니르.gif" width="270px" height="200px"/>
-                
+                <h1 class="master-title">마블 시네마틱 유니버스 추천 노래 모음</h1>
             </hgroup>
         </header>
         <nav id="main-navigation">
             <div class="pull-left">
                 <ul class="outer-menu">
                     <li class="outer-menu-item">
-                        <span class="menu-title">페이즈1</span>
+                        <span class="menu-title">스트리밍 추천 사이트</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="https://www.disneyplus.com/ko-kr?cid=DSS-SEARCH-NaverSA-0000000003_SEM_Disney+&dss_kw=%EB%94%94%EC%A6%88%EB%8B%88%ED%94%8C%EB%9F%AC%EC%8A%A4&n_media=335738&n_query=%EB%94%94%EC%A6%88%EB%8B%88%ED%94%8C%EB%9F%AC%EC%8A%A4&n_rank=1&n_ad_group=grp-a001-01-000000023904322&n_ad=nad-a001-01-000000179586338&n_keyword_id=nkw-a001-01-000004095091107&n_keyword=%EB%94%94%EC%A6%88%EB%8B%88%ED%94%8C%EB%9F%AC%EC%8A%A4&n_campaign_type=1&n_ad_group_type=1&NaPm=ct%3Dl4h9asyw%7Cci%3D0JS0003DlEHwxgVOSLmu%7Ctr%3Dsa%7Chk%3D274f2a1741db9dd21f88b17a00b90590f1663d16&gclid=CKOvgsi2svgCFY9AvAodelIO_Q&gclsrc=ds">디즈니+</a></li>
+                            <li class="inner-menu-item"><a href="https://www.netflix.com/kr/">넷플릭스</a></li>
+                        </ul>
                     </li>
                     <li class="outer-menu-item">
-                        <span class="menu-title">페이즈2</span>
+                        <span class="menu-title">음악 추천 사이트</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="https://www.melon.com/index.htm">멜론</a></li>
+                            <li class="inner-menu-item"><a href="https://www.soribada.com/">소리바다</a></li>
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/musicpremium">유튜브 뮤직</a></li>
+                        </ul>
                     </li>
                     <li class="outer-menu-item">
-                        <span class="menu-title">페이즈3</span>
-                    </li>
-                    <li class="outer-menu-item">
-                        <span class="menu-title">소니 유니버스</span>
+                        <span class="menu-title"><a href="https://www.marvel.com/movies">마블 스튜디오 홈페이지</a></span>
+                        </ul>
                     </li>
                 </ul>
-            </div>
-            <div class="pull-right">
-                <div class="search-bar">
-                    <form>
-                        <input type="text" class="input-search" />
-                        <input type="submit" class="input-search-submit" value="검색" />
-                    </form>
-                </div>
             </div>
         </nav>
         <div id="content">
             <section id="main-section">
                 <article>
                     <div class="article-header">
-                        <h1 class="article-title">아이언맨 명장면 모음</h1>
-                    </div>
-                    <div class="article-body">
-                        <img src="아이언맨.gif" width="700" height="300"/>
-                        <br />
-                        미완
-                        <br />
-                        <p>
-                    </div>
-                </article>
-                <article>
-                    <div class="article-header">
-                        <h1 class="article-title">스파이더맨 명장면 모음</h1>
-                    </div>
-                    <div class="article-body">
-                        <img src="노웨이홈 엔딩장면.gif"  width="700" height="300"/>
-                        <br />
-                        미완
-                        <br />
-                    </p>
+                        <h3 id="A"></h3>
+                        <h1 class="article-title">아이언맨 ost 모음</h1><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B9%99%20%EC%9C%84%EB%93%9C%20%EB%8D%94%20%EB%8B%A4%EC%9A%B4.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B9%99%20%EC%9C%84%EB%93%9C%20%EB%8D%94%20%EB%8B%A4%EC%9A%B4.mp4" width="500" height="300"></video><p class="article-date">드라이빙 위드 더 다운</p></a><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%EB%A0%88%EC%A0%84%EB%93%9C.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%EB%A0%88%EC%A0%84%EB%93%9C.mp4" width="500" height="300"></video><p class="article-date">레전드</p></a><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%EB%B0%B1%20%EC%9D%B8%EB%8D%94%20%EB%B8%94%EB%9E%99.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%EB%B0%B1%20%EC%9D%B8%EB%8D%94%20%EB%B8%94%EB%9E%99.mp4" width="500" height="300"></video><p class="article-date">백 인더 블랙</p></a><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%EC%B1%94%ED%94%BC%EC%96%B8.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%EC%B1%94%ED%94%BC%EC%96%B8.mp4" width="500" height="300"></video><p class="article-date">챔피언</p></a><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%ED%95%98%EC%9D%B4%EC%9B%A8%EC%9D%B4%20%ED%88%AC%20%ED%97%AC.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A8%20%ED%95%98%EC%9D%B4%EC%9B%A8%EC%9D%B4%20%ED%88%AC%20%ED%97%AC.mp4" width="500" height="300"></video><p class="article-date">하이웨이 투 헬</p></a><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A83%20%EB%A9%94%EC%9D%B8%ED%85%8C%EB%A7%88%EA%B3%A1.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A83%20%EB%A9%94%EC%9D%B8%ED%85%8C%EB%A7%88%EA%B3%A1.mp4" width="500" height="300"></video><p class="article-date">아이언맨3 메인테마곡</p></a><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A83%20%EC%BA%94%20%EC%9C%A0%20%EB%94%95%20%EC%9E%87.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%95%84%EC%9D%B4%EC%96%B8%EB%A7%A83%20%EC%BA%94%20%EC%9C%A0%20%EB%94%95%20%EC%9E%87.mp4" width="500" height="300"></video><p class="article-date">캔 유 딕 잇</p></a><br>
                     </div>
                 </article>
                 <article>
                     <div class="article-header">
-                        <h1 class="article-title">토르 명장면 모음</h1>
-                    </div>
-                    <div class="article-body">
-                        <img src="토르 스톰브레이커.gif"  width="700" height="300"/>
-                        <br />
-                        미완
-                        <br />
-                    </p>
+                        <h3 id="B"></h3>
+                        <h1 class="article-title">가디언즈 오브 갤럭시 ost 모음</h1><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%ea%b5%ac%eb%b3%b8%ec%a4%80res/%ea%b0%80%ec%98%a4%ea%b0%a4%20%eb%af%b8%ec%8a%a4%ed%84%b0%20%eb%b8%94%eb%a3%a8%20%ec%8a%a4%ec%b9%b4%ec%9d%b4.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%ea%b5%ac%eb%b3%b8%ec%a4%80res/%ea%b0%80%ec%98%a4%ea%b0%a4%20%eb%af%b8%ec%8a%a4%ed%84%b0%20%eb%b8%94%eb%a3%a8%20%ec%8a%a4%ec%b9%b4%ec%9d%b4.mp4" width="500" height="300"></video></a><p class="article-date">미스터 블루 스카이</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%EB%B8%8C%EB%A7%81%EC%9E%87%EC%98%A8%ED%99%88%ED%88%AC%EB%AF%B8.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%EB%B8%8C%EB%A7%81%EC%9E%87%EC%98%A8%ED%99%88%ED%88%AC%EB%AF%B8.mp4" width="500" height="300"></video></a><p class="article-date">브링 잇 홈 투 미</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%EC%95%84%EC%9D%B4%20%EC%9B%90%20%EC%B8%84%20%EB%B0%B1.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%EC%95%84%EC%9D%B4%20%EC%9B%90%20%EC%B8%84%20%EB%B0%B1.mp4" width="500" height="300"></video></a><p class="article-date">아이 원 츄 백</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%EC%B2%B4%EB%A6%AC%20%EB%B0%A4.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%EC%B2%B4%EB%A6%AC%20%EB%B0%A4.mp4" width="500" height="300"></video></a><p class="article-date">체리 밤</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%EC%BB%B4%20%EC%95%A4%20%EA%B0%AF%20%EC%9C%A0%EC%96%BC%20%EB%9F%AC%EB%B8%8C.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%EC%BB%B4%20%EC%95%A4%20%EA%B0%AF%20%EC%9C%A0%EC%96%BC%20%EB%9F%AC%EB%B8%8C.mp4" width="500" height="300"></a></video><p class="article-date">컴 앤 갯 유얼 러브</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%ED%9B%85%20%EC%98%A8%EB%8D%94%20%ED%95%84%EB%A7%81.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EA%B0%80%EC%98%A4%EA%B0%A4%20%ED%9B%85%20%EC%98%A8%EB%8D%94%20%ED%95%84%EB%A7%81.mp4" width="500" height="300"></video></a><p class="article-date">훅 온더 필링</p><br>
                     </div>
                 </article>
                 <article>
                     <div class="article-header">
-                        <h1 class="article-title">캡틴아메리카 명장면 모음</h1>
+                        <h3 id="C"></h3>
+                        <h1 class="article-title">스파이더맨 ost 모음</h1><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%8A%A4%ED%8C%8C%EC%9D%B4%EB%8D%94%EB%A7%A8%20%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90%20%EC%82%AC%EC%9A%B4%EB%93%9C%20%EB%A6%AC%EB%AF%B9%EC%8A%A4.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%8A%A4%ED%8C%8C%EC%9D%B4%EB%8D%94%EB%A7%A8%20%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90%20%EC%82%AC%EC%9A%B4%EB%93%9C%20%EB%A6%AC%EB%AF%B9%EC%8A%A4.mp4" width="500" height="300"></video></a><p class="article-date">스파이더맨 오리지널 사운드 트랙 리믹스</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%ED%86%B0%EC%8A%A4%ED%8C%8C%20%EB%A9%94%EC%9D%B8%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%ED%86%B0%EC%8A%A4%ED%8C%8C%20%EB%A9%94%EC%9D%B8%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4" width="500" height="300"></video></a><p class="article-date">톰 홀랜드 스파이더맨 메인 테마곡</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%83%98%EC%8A%A4%ED%8C%8C1%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%83%98%EC%8A%A4%ED%8C%8C1%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4" width="500" height="300"></video></a><p class="article-date">토비 맥과이어 스파이더맨1 메인 테마곡</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%83%98%EC%8A%A4%ED%8C%8C3%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%83%98%EC%8A%A4%ED%8C%8C3%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4" width="500" height="300"></video></a><p class="article-date">토비 맥과이어 스파이더맨3 메인 테마곡</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EC%8A%A4%ED%8C%8C1%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EC%8A%A4%ED%8C%8C1%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4" width="500" height="300"></video></a><p class="article-date">어메이징 스파이더맨1 메인 테마곡</p><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EC%8A%A4%ED%8C%8C2%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EC%8A%A4%ED%8C%8C2%20%ED%85%8C%EB%A7%88%EA%B3%A1.mp4" width="500" height="300"></video></a><p class="article-date">어메이징 스파이더맨2 메인 테마곡</p><br>
                     </div>
-                    <div class="article-body">
-                        <img src="캡틴 아메리카.gif" width="700" height="300"/>
-                        <br />
-                        미완
-                        <br />
-                    </p>
+                </article>
+                <article>
+                    <div class="article-header">
+                        <h3 id="D"></h3>
+                        <h1 class="article-title">어벤져스 ost 모음</h1><br>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A41%20ost.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A41%20ost.mp4" width="270" height="400"></video></a>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A42%20ost.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A42%20ost.mp4" width="270" height="400"></video></a>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A43%20ost.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A43%20ost.mp4" width="270" height="400"></video></a>
+                        <a href="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A44%20ost.mp4"><video src="http://uxdesign.pw/~webpub2022/final1_%ea%b0%9c%ec%9d%b8%ea%b3%bc%ec%a0%9c/%ea%b5%ac%eb%b3%b8%ec%a4%80/%EA%B5%AC%EB%B3%B8%EC%A4%80res/%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A44%20ost.mp4" width="270" height="400"></video></a>
                     </div>
                 </article>
             </section>
-            
-            <aside id="main-aside">
-                <div class="aside-list">
-                    <h3>마블 영화 <br/>지렸던 등장씬 모음</h3>
-                    <ul>
-                        <br />
-                        <li><a href="">전설의 등장씬1</a></li>
-                        <br />
-                        <li><a href="">전설의 등장씬2</a></li>
-                        <br />
-                        <li><a href="">전설의 등장씬3</a></li>
-                        <br />
-                        <li><a href="">전설의 등장씬4</a></li>
-                        <br />
-                        <li><a href="">전설의 등장씬5</a></li>
-                    </ul>
-                </div>
-            </aside>
         </div>
         <footer id="main-footer">
-            <a href="#">맨 위로</a>
+            <a href="#">UP</a>
         </footer>
     </div>
-        <p class="p"><img src="어메이징 스파이더맨 2.2.gif" width="280"/></p>
+    <p class="p"><img src="어메이징 스파이더맨 2.2.gif" width="280"/></p>
         <p class="fp"><img src="어둠의 댄서1.gif" width="300"/></p>
         <p class="fp2"><img src="닥터스트레인지1.gif" width="300"/></p>
         <p class="fp3"><img src="어메이징 스파이더맨3.gif" width="260"/></p>
-        <p class="fp4"></p>
-   
+
+    <div class="pull-left">
+        <ul class="outer-menu">
+            <li class="outer-menu-item">
+                <span class="fp4"><b><a href="#A"><img src="아이언맨 얼굴.png" width="90px" height="70px"></a></b></span>
+            </li>
+            <li class="outer-menu-item">
+                <span class="fp5"><b><a href="#B"><img src="가오갤 포스터.jpg" width="90px" height="70px"></a></b></span>
+            </li>
+            <li class="outer-menu-item">
+                <span class="fp6"><b><a href="#C"><img src="스파이더맨 얼굴.jpg" width="100px" height="70px"></a></b></span>
+            </li>
+            <li class="outer-menu-item">
+                <span class="fp7"><b><a href="#D"><img src="인피니티 스톤.jpg" width="90px" height="70px"></a></b></span>
+            </li>
+        </ul>
 </body>
 </html>
